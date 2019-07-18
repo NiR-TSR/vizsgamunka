@@ -1,0 +1,212 @@
+
+/******************************/
+        /* NAVBAR */
+/******************************/
+
+
+.navbar {
+    background-color: rgba(13, 13, 13, 0.8);
+    padding-top: 0.5% !important;
+    padding-bottom: 0.5% !important;
+    transition: all 1.25s ease-in-out;
+}
+
+.navbar-brand:link,
+.navbar-brand:visited {
+    color: #9a6c4c;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    border-style: none;
+    text-decoration: none;
+}
+
+.navbar-brand:hover,
+.navbar-brand:active {
+    color: #ab7b54;
+}
+
+.divider {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.navbar-nav li a:link,
+.navbar-nav li a:visited {
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-style: none;
+    text-decoration: none;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a:active {
+    color: white;
+    text-shadow: 0rem 0rem 0.05rem white;
+}
+
+.navbar .btn {
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-style: none;
+    text-decoration: none;
+    padding-top: 0.5% !important;
+    padding-bottom: 0.5% !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+
+.navbar .btn:hover,
+.navbar .btn:active {
+    color: white;
+    text-shadow: 0rem 0rem 0.05rem white;
+}
+
+.navbar .btn.focus, .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/******************************/
+        /* FOOTER */
+/******************************/
+
+
+.footer {
+    background-color: #0d0d0d;
+    height: 17vh;
+    border-top: 0.2rem solid black;
+}
+
+.footer-link {
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    list-style-type: none;
+}
+
+.fa-info {
+    color: white;
+    font-size: 2.2rem;
+}
+
+.footer-link li a:link,
+.footer-link li a:visited {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-style: none;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.footer-link li a:hover,
+.footer-link li a:active {
+    color: white;
+    text-shadow: 0rem 0rem 0.05rem white;
+    padding-left: 5%;
+}
+
+.footer-tudnivalok {
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    list-style-type: none;
+}
+
+.aszf a:link,
+.aszf a:visited {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-style: none;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.aszf a:hover,
+.aszf a:active {
+    color: white;
+    text-shadow: 0rem 0rem 0.05rem white;
+    padding-right: 5%;
+}
+
+.footer-tudnivalok .btn {
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-style: none;
+    text-decoration: none;
+    transition: 1s;
+    padding: 0 !important;
+}
+
+.footer-tudnivalok .btn:hover,
+.footer-tudnivalok .btn:active {
+    color: white;
+    text-shadow: 0rem 0rem 0.05rem white;
+    padding-right: 5% !important;
+}
+
+.footer-tudnivalok .btn.focus, .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.kavebabLogo {
+    width: 100px;
+}
+
+@media only screen and (max-width: 785px) {
+    .footer {
+        height: 40vh;
+    }
+}
+
+
+/******************************/
+        /* MODAL */
+/******************************/
+
+
+.modal-content {
+    background-color: #f6f2ee;
+    border-width: 0.1rem;
+    border-color: #9a6f4c;
+    font-size: 0.9rem;
+}
+
+.modal-header {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #9a6f4c;
+}
+
+.modal-body {
+    letter-spacing: 0.05rem;
+}
+
+.bezarasGomb {
+    color: #666666;
+}
+
+.bezarasGomb:hover {
+    color: black;
+}
+
+.modal-body li {
+    list-style-type: none;
+}
+
+.vastagCim {
+    font-weight: 700;
+    color: #9a6f4c;
+}

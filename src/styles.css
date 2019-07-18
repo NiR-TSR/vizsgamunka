@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+}
+
+html {
+    color: white;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    background-color: #131313;
+}

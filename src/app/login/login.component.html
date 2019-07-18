@@ -1,0 +1,42 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <h1>Bejelentkezés</h1>
+
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    
+                    <div class="form-group">
+                        <label for="username">Felhasználónév</label>
+                        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                            <div *ngIf="f.username.errors.required">A felhasználónév kitöltése kötelező!</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Jelszó</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">A jelszó kitöltése kötelező!</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group gombok">
+                        <button [disabled]="loading" class="btn-full">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Bejelentkezés
+                        </button>
+
+                        <button type="button" class="btn" routerLink="/register">Regisztráció</button>
+
+                        <button type="button" class="btn" (click)="backClicked()">Vissza</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>

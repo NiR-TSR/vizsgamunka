@@ -1,0 +1,35 @@
+<section>
+    <div class="container">
+            <div class="row">
+                <div class="col text-box">
+                    <h1>Kosár</h1>
+                    <div class="kozepvonal col"></div>
+                </div>
+            </div>
+
+        <div class="row" *ngFor="let item of items">
+            <div class="col">
+                <a class="kosar" style="color: #9a6c4c;" (click)="remove(item.product.id)">Törlés</a>
+            </div>
+            <div class="col text-center">
+                <h4 class="kosar">{{item.product.name}}</h4>
+            </div>
+            <div class="col text-center">
+                <p class="kosar">Ár: {{item.product.price}}</p>
+            </div>
+            <div class="col text-center">
+                <p class="kosar">Mennyiség: {{item.quantity}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="osszesen">Összesen fizetendő: {{total}} Ft</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button type="button" role="button" class="btn" (click)="leadas()">Leadom a rendelést</button>
+            </div>
+        </div>
+    </div>
+</section>

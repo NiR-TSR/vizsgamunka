@@ -1,0 +1,67 @@
+section {
+    color: white;
+    background-color: #131313;
+}
+
+h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.25rem;
+    margin-top: 15%;
+}
+
+h2 {
+    color: #9a6c4c;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.25rem;
+}
+
+h3 {
+    color: #9a6c4c;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.25rem;
+    border-bottom: 0.05rem solid #9a6c4c;
+    padding-bottom: 1%;
+}
+
+h4 {
+    color: #9a6c4c;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.25rem;
+}
+
+p {
+    font-size: 0.9rem;
+    text-align: justify;
+    margin-bottom: 4%;
+}
+
+p a:link,
+p a:visited {
+    color: white;
+    border-style: none;
+    text-decoration: none;
+}
+
+p a:hover,
+p a:active {
+    color: white;
+    text-shadow: 0rem 0rem 0.05rem white;
+}
+
+ul {
+    list-style: none;
+    font-size: 0.9rem;
+}
+  
+ul li::before {
+    content: "\2022";
+    color: #9a6c4c;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1rem;
+    line-height: 250%;
+}

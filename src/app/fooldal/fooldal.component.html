@@ -1,0 +1,47 @@
+<section id="kezdolap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="text-box">
+          <h1>Fall'armo</h1>
+          <h3 class="ml-3">Az íz, ami megigéz..</h3>
+          <button type="button" class="btn btn-full pt-3" [ngx-scroll-to]="'#szarmazas'">Bővebben <i class="arrowicon fas fa-angle-double-right"></i></button>
+          <div id="scroll-icon"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="szarmazas">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="feleszoveg col-6 offset-6">
+        <div class="text-box mr-5 ml-3">
+          <h1>Egyenesen Brazíliából</h1>
+          <div class="kozepvonal col"></div>
+          <h3>Gondosan válogatva, a legjobbat hozzuk el Neked.</h3>
+          <h4>Brazília a világ egyik legnagyobb kávétermelő országa. Hagyománynak számít már náluk a kávétermesztés, biztos lehetsz benne, hogy kiváló minőséggel szolgálnak.</h4>
+          <button type="button" class="btn" [ngx-scroll-to]="'#minoseg'"><i class="arrowdown fas fa-angle-double-down"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="minoseg">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="feleszoveg col">
+        <div class="text-box ml-5 mr-3">
+          <h1>Tudjuk, hogy mindenki mást kíván</h1>
+          <div class="kozepvonal col"></div>
+          <h3>Ezért is rendelkezünk széles választékkal.</h3>
+          <h4>Az erős feketét preferálod? Netán lágyabb ízekkel kívánod kényeztetni magad? Ugorj termékeinkhez és döntsd el, melyik illik a legjobban hozzád!</h4>
+          <a routerLink="/termekeinkrol" class="btn btn-full">Megtekintem!</a>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</section>

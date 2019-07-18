@@ -1,0 +1,128 @@
+<nav id="navigacio" class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <a routerLink="/fooldal" class="navbar-brand ml-5">Fall'armo<i class="divider fas fa-grip-lines-vertical ml-2 mr-2"></i></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#osszeccsuk" aria-controls="osszeccsuk" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="osszeccsuk">
+
+        <ul class="navbar-nav align-items-center text-center">
+            <li class="nav-item pr-2 pl-2">
+                <a routerLink="/termekeinkrol" class="nav-link">Termékeinkről</a>
+            </li>
+            <li class="nav-item pr-2 pl-2">
+                <a routerLink="/product" class="nav-link">Vásárlás</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav align-items-center text-center ml-auto">
+            <li class="nav-item pr-2 pl-2" *ngIf="!currentUser">
+                <a routerLink="/register" class="nav-link"><i class="far fa-address-card mr-1"></i> Regisztráció</a>
+            </li>
+            <li class="nav-item pr-2 pl-2" *ngIf="!currentUser">
+                <a routerLink="/login" class="nav-link"><i class="far fa-user mr-1"></i> Bejelentkezés</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav align-items-center text-center">
+            <button type="button" class="btn btn-full" routerLink="/cart" *ngIf="currentUser"><i class="fas fa-shopping-cart mr-1"></i> Kosár</button>
+            <button type="button" class="btn btn-full" *ngIf="currentUser" (click)="logout()"><i class="fas fa-sign-out-alt mr-1"></i> Kijelentkezés</button>
+        </ul>
+
+    </div>
+
+</nav>
+
+<div>
+    
+    <alert></alert>
+    <router-outlet></router-outlet>
+
+</div>
+
+<div class="container-fluid footer">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-4">
+                <ul class="footer-link">
+                    <li class="mt-4 mb-2"><a href="https://www.facebook.com/NiR.TSR"><i class="fab fa-facebook-square mr-2"></i>Facebook</a></li>
+                    <li class="mb-2"><a href="https://www.instagram.com/nirtsr/"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 mt-2 text-center"><img src="../../assets/resources/html_img/kavebabLogo.png" class="m-auto kavebabLogo" alt="Logo"></div>
+            <div class="col-sm-4 text-right">
+                <ul class="footer-tudnivalok">
+                    <li class="mt-4 mb-2 aszf"><a routerLink="/aszf">ÁSZF <i class="far fa-file-alt"></i></a></li>
+                    <li class="mb-2"><button type="button" class="btn" data-toggle="modal" data-target="#kapcsolatModal">
+                        Kapcsolat <i class="fas fa-address-book"></i>
+                    </button></li>
+                    <li class="mb-2"><button type="button" class="btn" data-toggle="modal" data-target="#szallitasModal">
+                        Szállítási információk <i class="fas fa-shipping-fast"></i>
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Kapcsolat modal -->
+
+<div class="modal fade" id="kapcsolatModal" tabindex="-1" role="dialog" aria-labelledby="kapcsolatModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="kapcsolatModalTitle">Kapcsolat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li class="mb-1 vastagCim"><i class="fas fa-map-marker-alt mr-2"></i> Üzletünk: </li>
+                    <li class="pl-4 mb-2">6969 Csányoszró, Arany út 96.</li>
+                    <li class="mb-1 vastagCim"><i class="far fa-clock mr-1"></i> Nyitvatartás: </li>
+                    <li class="pl-4 mb-2">H-P: 10:00 - 18:00</li>
+                    <li class="mb-1 vastagCim"><i class="fas fa-phone mr-1"></i> Telefonszám: </li>
+                    <li class="pl-4 mb-2">+36 30 69 69 696</li>
+                    <li class="mb-1 vastagCim"><i class="fas fa-envelope mr-1"></i> E-mail cím: </li>
+                    <li class="pl-4 mb-2">p.peti92@ymail.com</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn bezarasGomb" data-dismiss="modal">Bezárás</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Szállítás modal -->
+
+<div class="modal fade" id="szallitasModal" tabindex="-1" role="dialog" aria-labelledby="szallitasModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="szallitasModalTitle">Szállítási információk</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="text-center">
+                    <li class="mb-1 vastagCim">Milyen átvételi lehetőségeim vannak?</li>
+                    <li class="mb-3">Cégünk esetében három féle mód lehetséges: <b>személyes átvétel, </b> <b>házhoszállítás</b> futárszolgálattal, avagy átvétel <b>PickPack</b> ponton.</li>
+                    <li class="mb-1 vastagCim">Mennyi idő alatt szállítjuk ki a csomagot?</li>
+                    <li class="mb-3">A rendelés visszaigazolását követően általában <b>1-2 munkanapon</b> belül kézbe is veheted a terméket.</li>
+                    <li class="mb-1 vastagCim">Ki fogja szállítani nekem?</li>
+                    <li class="mb-3">A <b>GLS futárszolgálattal</b> vagyunk szerződésben, így ők fogják eljuttatni számodra a csomagod.</li>
+                    <li class="mb-1 vastagCim">Mennyibe kerül a kiszállítás és milyen fizetési módjaim vannak?</li>
+                    <li class="mb-3">A szállítás díja egységesen <b>1290 Ft,</b> amihez <b>utánvét</b> esetén még <b>290 Ft</b> plusz költség társul. <br> Az összeget kiegyenlítheted készpénzzel, bankkártyával és előre utalással is.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn bezarasGomb" data-dismiss="modal">Bezárás</button>
+            </div>
+        </div>
+    </div>
+</div>

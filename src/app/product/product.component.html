@@ -1,0 +1,83 @@
+<section>
+    <div class="container">
+
+        <div class="row">
+            <div class="col text-box">
+                <h1>Vásárlás</h1>
+                <div class="kozepvonal col"></div>
+            </div>
+        </div>
+
+        <!-- Azért nem használtam az *ngFor-t, mert így optimálisabb volt a helyzet megoldására (nekem, 6 termék esetében), mintha mind betöltöttem volna ide egyszerre. -->
+
+        <div class="row text-center">
+            <div class="col-lg-4">
+                <img src="{{products[0].photo}}" width="320px">
+                <h4>- {{products[0].name}} -</h4>
+                <p class="azonosito">Azonosító: {{products[0].id}}</p>
+                <p class="ar">{{products[0].price}} Ft</p>
+                <p class="mennyiseg">Mennyiség: 1 kg</p>
+                <p class="darabszam">Kérlek, írd be a darabszámot!</p>
+                <input type="number" value="1" class="form-control inputMezo" [(ngModel)]="inputNumber0">
+                <button type="button" class="btn btn-full kosarba" (click)="kosarhoz(products[0].id, inputNumber0)">Kosárba <i class="fas fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="col-lg-4">
+                <img src="{{products[1].photo}}" width="320px">
+                <h4 style="color: #8b0000;">- {{products[1].name}} -</h4>
+                <p class="azonosito">Azonosító: {{products[1].id}}</p>
+                <p class="ar">{{products[1].price}} Ft</p>
+                <p class="mennyiseg">Mennyiség: 1 kg</p>
+                <p class="darabszam">Kérlek, írd be a darabszámot!</p>
+                <input type="number" class="form-control inputMezo" [(ngModel)]="inputNumber1">
+                <button type="button" class="btn btn-full kosarba" (click)="kosarhoz(products[1].id, inputNumber1)">Kosárba <i class="fas fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="col-lg-4">
+                <img src="{{products[2].photo}}" width="320px">
+                <h4 style="color: #009900;"> - {{products[2].name}} -</h4>
+                <p class="azonosito">Azonosító: {{products[2].id}}</p>
+                <p class="ar">{{products[2].price}} Ft</p>
+                <p class="mennyiseg">Mennyiség: 1 kg</p>
+                <p class="darabszam">Kérlek, írd be a darabszámot!</p>
+                <input type="number" class="form-control inputMezo" [(ngModel)]="inputNumber2">
+                <button type="button" class="btn btn-full kosarba" (click)="kosarhoz(products[2].id, inputNumber2)">Kosárba <i class="fas fa-cart-arrow-down"></i></button>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-lg-4">
+                <img src="{{products[3].photo}}" width="320px">
+                <h4 style="color: #664833;">- {{products[3].name}} -</h4>
+                <p class="azonosito">Azonosító: {{products[3].id}}</p>
+                <p class="ar">{{products[3].price}} Ft</p>
+                <p class="mennyiseg">Mennyiség: 1 kg</p>
+                <p class="darabszam">Kérlek, írd be a darabszámot!</p>
+                <input type="number" class="form-control inputMezo" [(ngModel)]="inputNumber3">
+                <button type="button" class="btn btn-full kosarba" (click)="kosarhoz(products[3].id, inputNumber3)">Kosárba <i class="fas fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="col-lg-4">
+                <img src="{{products[4].photo}}" width="320px">
+                <h4 style="color: #0000e6;">- {{products[4].name}} -</h4>
+                <p class="azonosito">Azonosító: {{products[4].id}}</p>
+                <p class="ar">{{products[4].price}} Ft</p>
+                <p class="mennyiseg">Mennyiség: 1 kg</p>
+                <p class="darabszam">Kérlek, írd be a darabszámot!</p>
+                <input type="number" class="form-control inputMezo" [(ngModel)]="inputNumber4">
+                <button type="button" class="btn btn-full kosarba" (click)="kosarhoz(products[4].id, inputNumber4)">Kosárba <i class="fas fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="col-lg-4">
+                <img src="{{products[5].photo}}" width="320px">
+                <h4 style="color: #c3a188;">- {{products[5].name}} -</h4>
+                <p class="azonosito">Azonosító: {{products[5].id}}</p>
+                <p class="ar">{{products[5].price}} Ft</p>
+                <p class="mennyiseg">Mennyiség: 1 kg</p>
+                <p class="darabszam">Kérlek, írd be a darabszámot!</p>
+                <input type="number" class="form-control inputMezo" [(ngModel)]="inputNumber5">
+                <button type="button" class="btn btn-full kosarba" (click)="kosarhoz(products[5].id, inputNumber5)">Kosárba <i class="fas fa-cart-arrow-down"></i></button>
+            </div>
+
+            <div class="kozepvonal col"></div>
+            
+        </div>
+
+    </div>
+</section>

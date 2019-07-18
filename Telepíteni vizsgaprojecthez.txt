@@ -1,0 +1,8 @@
+npm install --save @angular/cdk@7.3.7
+npm install --save @angular/material@7.3.7
+npm install --save hammerjs
+npm install @nicky-lenaers/ngx-scroll-to
+
+Ha kérné esetleg a project.. 
+
+   npm i zone.js
